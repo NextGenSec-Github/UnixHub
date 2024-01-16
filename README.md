@@ -2,7 +2,7 @@
 
 Dive into the world of Unix, Bash scripting, and Linux fun with UnixHub! 🌐✨
 
-![](https://raw.githubusercontent.com/yusufmunircloud/AWS-Projects/main/img/general/NGS-8.png)
+![](https://raw.githubusercontent.com/yusufmunircloud/AWS-Projects/main/img/general/NGS-9.png)
 
 
 ## 🚀 Get Started
