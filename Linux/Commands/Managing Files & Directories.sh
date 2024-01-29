@@ -1,3 +1,4 @@
+#!/bin/bash
 
 === Linux Commands Cheatsheet ===
 
@@ -33,6 +34,26 @@ File Viewing and Editing:
 1. cat       - Display the contents of a file
               #- cat <file>: Display the entire contents of a file
 2. more      - Display the contents of a file one screen at a time
-              #- more <file>: Paginate through
+              #- more <file>: Paginate through the contents of a file
+3. less      - Similar to more but with additional features
+              #- less <file>: Paginate through the contents of a file with more features
+4. nano/vi   - Text editors for creating and editing files
+              #- nano <file> or vi <file>: Open a text editor for file editing
 
+Searching:
+1. find      - Search for files and directories
+              #- find <directory> -name <filename>: Search for a file in a directory
+2. grep      - Search for patterns in files
+              #- grep <pattern> <file>: Search for a pattern in a file
+              #- grep -r <pattern> <directory>: Recursive search in a directory
+
+Permissions:
+1. chmod     - Change file permissions
+              #- chmod <permissions> <file>: Change the permissions of a file
+2. chown     - Change file owner and group
+              #- chown <user>:<group> <file>: Change the owner and group of a file
+
+System Information:
+1. df        - Display disk space usage
+2. du        - Display file and directory space usage
 
