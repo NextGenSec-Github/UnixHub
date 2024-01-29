@@ -1,6 +1,4 @@
-#!/bin/bash
 
-cat <<EOF
 === Linux Commands Cheatsheet ===
 
 Navigation:
