@@ -159,12 +159,40 @@ find . -type f ! -name "ignore.txt"
 # To display only the file names without path: %f is the file name without path
 find . -type f -printf "%f\n"
 
+# Pattern Matching & More with Grep
 
+# Basic Text Search: Search for a specific pattern in a file
+grep "pattern" filename
 
+# Case-Insensitive Search: Performing a case-insensitive search
+grep -i "pattern" filename
 
+# Recursive Searches: Searching for a pattern in all files within a directory (recursively)
+grep -r "pattern" /path/to/directory
 
+# Show Line Numbers: Displaying line numbers along with matching lines
+grep -n "pattern" filename
 
+# Inverting Matches: Displaying lines that do not match the pattern
+grep -v "pattern" filename
 
+# Counting Matches: Counting the number of lines that match the pattern
+grep -c "pattern" filename
+
+# Advanced Pattern Matching: Using extended regular expressions for complex patterns
+grep -E "pattern" filename
+
+# Word Match: Matching whole words, not substrings
+grep -w "word" filename
+
+# Contextual Output: Printing lines before and after the matching line
+grep -C 2 "pattern" filename
+
+# Show Only Matching Part: Displaying only the part of the line that matches the pattern
+grep -o "pattern" filename
+
+# Filtering File Types: Searching only in files of a specific type (e.g., .txt)
+grep "pattern" *.txt
 
 
 
