@@ -104,4 +104,62 @@ echo {file*,document*}
 # List all files with names starting with "file" or "document" in subdirectories (recursive)
 echo **/{file*,document*}
 
+mv *.jpg {file_directory}
+
+
+Find:
+
+# List All Files in a Directory
+find . 
+
+# To list only files
+find . -type f
+
+# To list only directories
+find . -type d 
+
+# Filtering by Modification Time: To find files modified within the last seven days:
+find . -type f -mtime -7
+
+# To find files larger than one megabyte:
+find . -type f -size +1M
+
+# Deleting Empty Files:
+find . -type f -empty -delete
+
+# Deletes all files in the specified directory
+find . -type f -delete
+
+# Use man to access the manual pages for detailed information
+man find
+
+# To find files with a specific name (e.g., "example.txt"):
+find . -type f -name "example.txt"
+
+# To find files with a specific exstension:
+find . -type f -name "*.py"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
