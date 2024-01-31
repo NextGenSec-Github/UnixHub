@@ -1,59 +1,107 @@
 #!/bin/bash
 
-=== Linux Commands Cheatsheet ===
+=== Linux Commands Cheatsheet: Managing Files & Directories ===
 
-Navigation:
-1. pwd       - Print working directory
-2. cd        - Change directory
-              #- cd <directory>: Change to a specific directory
-              #- cd ..: Move up one directory
-              #- cd ~: Change to the home directory
-3. ls        - List files and directories
-              #- ls -l: Detailed list view
-              #- ls -a: List all files, including hidden ones
-              #- ls -lh: Human-readable file sizes
+# Navigation and Listing
 
-File and Directory Operations:
-1. cp        - Copy files or directories
-              #- cp <source> <destination>: Copy a file or directory
-              #- cp -r <source_directory> <destination_directory>: Recursive copy
-2. mv        - Move or rename files or directories
-              #- mv <source> <destination>: Move or rename a file or directory
-3. rm        - Remove files or directories
-              #- rm <file>: Remove a file
-              #- rm -r <directory>: Remove a directory and its contents (use with caution)
-              #- rm -f <file>: Force removal without confirmation
-4. mkdir     - Create a new directory
-              #- mkdir <directory_name>: Create a new directory
-5. rmdir     - Remove an empty directory
-              #- rmdir <directory_name>: Remove an empty directory
-6. touch     - Create an empty file or update file timestamps
-              #- touch <file>: Create an empty file
+# Change Directory
+cd directory_path
 
-File Viewing and Editing:
-1. cat       - Display the contents of a file
-              #- cat <file>: Display the entire contents of a file
-2. more      - Display the contents of a file one screen at a time
-              #- more <file>: Paginate through the contents of a file
-3. less      - Similar to more but with additional features
-              #- less <file>: Paginate through the contents of a file with more features
-4. nano/vi   - Text editors for creating and editing files
-              #- nano <file> or vi <file>: Open a text editor for file editing
+# List Files
+ls
 
-Searching:
-1. find      - Search for files and directories
-              #- find <directory> -name <filename>: Search for a file in a directory
-2. grep      - Search for patterns in files
-              #- grep <pattern> <file>: Search for a pattern in a file
-              #- grep -r <pattern> <directory>: Recursive search in a directory
+# List Files with Details
+ls -l
 
-Permissions:
-1. chmod     - Change file permissions
-              #- chmod <permissions> <file>: Change the permissions of a file
-2. chown     - Change file owner and group
-              #- chown <user>:<group> <file>: Change the owner and group of a file
+# List All Files (including hidden)
+ls -a
 
-System Information:
-1. df        - Display disk space usage
-2. du        - Display file and directory space usage
+# List Files with Details and Hidden Files
+ls -la
+
+
+# File and Directory Operations
+
+# Create a Directory
+mkdir directory_name
+
+# Create a File
+touch filename
+
+# Copy a File
+cp source_file destination
+
+# Copy a Directory
+cp -r source_directory destination
+
+# Move/Rename a File
+mv old_name new_name
+
+# Move/Rename a Directory
+mv old_directory new_directory
+
+# Remove (Delete) a File
+rm filename
+
+# Remove (Delete) a Directory and its Contents
+rm -r directory_name
+
+# View File Contents
+cat filename
+
+# Edit a File (using a text editor like nano, vim, or emacs)
+nano filename  # or vim, emacs, etc.
+
+# File Permissions:
+
+# Change File Permissions
+chmod permissions filename
+
+# Change Directory Permissions
+chmod permissions directory_name
+
+
+# Searching and Finding
+
+# Find Files by Name
+find starting_directory -name filename
+
+# Find Files by Type
+find starting_directory -type f
+
+# Find Directories
+find starting_directory -type d
+
+#File Globbing:
+
+# List all files in the current directory
+echo *
+
+# List all files with a specific extension (e.g., .txt)
+echo *.txt
+
+# List all files with names starting with "file"
+echo file*
+
+# List all files with names ending with "file"
+echo *file
+
+# List all files with names containing "pattern"
+echo *pattern*
+
+# List all files in subdirectories (recursive)
+echo **/*
+
+# List all files with names starting with "file" in subdirectories (recursive)
+echo **/file*
+
+# List all files with names ending with ".txt" in subdirectories (recursive)
+echo **/*.txt
+
+# List all files with names starting with "file" or "document"
+echo {file*,document*}
+
+# List all files with names starting with "file" or "document" in subdirectories (recursive)
+echo **/{file*,document*}
+
 
