@@ -60,18 +60,6 @@ chmod permissions filename
 # Change Directory Permissions
 chmod permissions directory_name
 
-
-# Searching and Finding
-
-# Find Files by Name
-find starting_directory -name filename
-
-# Find Files by Type
-find starting_directory -type f
-
-# Find Directories
-find starting_directory -type d
-
 #File Globbing:
 
 # List all files in the current directory
@@ -139,13 +127,37 @@ find . -type f -name "example.txt"
 # To find files with a specific exstension:
 find . -type f -name "*.py"
 
+# To find files modified more than 30 days ago:
+find . -type f -mtime +30
 
+# Combining Conditions: To find files modified within the last 7 days and larger than 1GB:
+find . -type f -mtime -7 -size +1G
 
+# To execute a command on each found file (e.g., delete all .tmp files):
+# NOTE: Replace rm with the desired command.
+find . -type f -name "*.tmp" -exec rm {} \;
 
+# Handling Permission Errors: Redirects error messages to /dev/null.
+find . -type f -name "example.txt" 2>/dev/null
 
+# To find files with specific permissions (e.g., read and write for the owner):
+find . -type f -perm -600
 
+# To find files owned by a specific user or group:
+find . -type f -user username
+find . -type f -group groupname
 
+# To find and list empty directories:
+find . -type d -empty
 
+# To find directories modified in the last 7 days:
+find . -type d -mtime -7
+
+# To find files not matching a certain pattern:
+find . -type f ! -name "ignore.txt"
+
+# To display only the file names without path: %f is the file name without path
+find . -type f -printf "%f\n"
 
 
 
