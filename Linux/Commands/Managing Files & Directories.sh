@@ -197,6 +197,56 @@ grep -o "pattern" filename
 # Filtering File Types: Searching only in files of a specific type (e.g., .txt)
 grep "pattern" *.txt
 
+# Reading Files
+
+# Display the contents of a file:
+cat filename
+
+# Display multiple files:
+cat filename1 filename2
+
+# Concatenate and display files:
+cat filename1 filename2 >> exportfile
+
+# Display line numbers with the content:
+cat -n filename
+
+# Display non-printing characters (show tabs as ^I, and end lines with $):
+
+cat -v filename
+
+# Display file with line breaks as dollar signs:
+cat -e filename
+
+# Append the content of one file to another:
+cat file1 >> file2
+
+# Display the first 10 lines of a file:
+cat filename | head -n 10
+
+# Display the last 10 lines of a file:
+cat filename | tail -n 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
