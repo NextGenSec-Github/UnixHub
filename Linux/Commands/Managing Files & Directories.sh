@@ -159,6 +159,9 @@ find . -type f ! -name "ignore.txt"
 # To display only the file names without path: %f is the file name without path
 find . -type f -printf "%f\n"
 
+# Delete files that are bigger than 10MB
+find . -type f -size +10M -delete
+
 # Pattern Matching & More with Grep
 
 # Basic Text Search: Search for a specific pattern in a file
