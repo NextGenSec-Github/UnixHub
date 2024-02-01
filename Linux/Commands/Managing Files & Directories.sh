@@ -227,10 +227,110 @@ cat filename | head -n 10
 # Display the last 10 lines of a file:
 cat filename | tail -n 10
 
+# The less command
 
+# View a file with less:
+less filename
 
+# Navigate within less:
+- Use arrow keys to scroll up and down.
+- Press "Space" to scroll one page down.
+- Press "b" to scroll one page up.
+- Press "q" to exit less.
 
+# Search within less:
+- Press "/" followed by your search term and press Enter.
+- Press "n" to go to the next occurrence.
+- Press "N" to go to the previous occurrence.
 
+# Display line numbers:
+less -N filename
+
+# Highlight search results:
+less -p "pattern" filename
+
+# Display line numbers and search highlights:
+less -Np "pattern" filename
+
+# Display file with line breaks as dollar signs:
+less -S filename
+
+# View multiple files sequentially:
+less file1 file2 file3
+
+# Jump to a specific line number:
+less +n filename  # Replace 'n' with the line number.
+
+# View file from the end:
+less +G filename
+
+# Display help for less:
+less --help
+
+# Display version information:
+less --version
+
+# Monitor a file for changes (similar to 'tail -f'):
+less +F filename
+
+# View compressed files without decompressing:
+less filename.gz
+
+# Pipe output of a command into less:
+command | less
+
+# Display and follow the output of a command (similar to 'tail -f'):
+command |& less
+
+# Word Count (wc) command is used to display the count of lines, words, and characters in a file. 
+
+# Count lines, words, and characters in a file:
+wc filename
+
+# Display only the number of lines in a file:
+wc -l filename
+
+# Display only the number of words in a file:
+wc -w filename
+
+# Display only the number of characters in a file:
+wc -c filename
+
+# Display the number of lines, words, and characters for each file in a directory:
+wc *
+
+# Count lines, words, and characters for multiple files:
+wc file1 file2 file3
+
+# Count lines, words, and characters for all files in a directory and its subdirectories:
+find . -type f -exec wc {} +
+
+# Display total counts when processing multiple files:
+wc -lwc filename1 filename2
+
+# Display the total count at the end:
+cat filename1 filename2 | wc
+
+# Count lines, words, and characters for input from a pipeline:
+echo "Hello, World!" | wc
+
+# Display only the total number of lines, words, and characters:
+echo "Hello, World!" | wc -lwc
+
+# Count lines, words, and characters for a command output:
+ls -l | wc
+
+# Display the number of lines, words, and characters for a specific line range in a file:
+sed -n '10,20p' filename | wc
+
+# Display the number of lines in all files with a specific extension in a directory:
+find . -type f -name "*.txt" -exec wc -l {} +
+
+# Display the number of lines, words, and characters for a compressed file:
+zcat filename.gz | wc
+
+# Display only the number of lines for a compressed file:
+zcat filename.gz | wc -l
 
 
 
