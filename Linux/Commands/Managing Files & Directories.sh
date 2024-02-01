@@ -332,8 +332,64 @@ zcat filename.gz | wc
 # Display only the number of lines for a compressed file:
 zcat filename.gz | wc -l
 
+# This Disk Usage (du) command is used to estimate the space used by a file or directory. 
 
+# Display disk space usage for the current directory:
+du
 
+# Display disk space usage in a human-readable format:
+du -h
+
+# Display disk space usage for a specific directory:
+du directory
+
+# Display total disk space usage for a directory and its subdirectories:
+du -h --max-depth=1 directory
+
+# Display total disk space usage for each subdirectory in a directory:
+du -h --max-depth=1 directory/*
+
+# Display disk space usage with a summary for each subdirectory:
+du -h --max-depth=1 --summarize directory/*
+
+# Display total disk space usage for each subdirectory and sort by size:
+du -h --max-depth=1 directory/* | sort -h
+
+# Display disk space usage in kilobytes:
+du -k directory
+
+# Display disk space usage for all files in the current directory and its subdirectories:
+du -h --max-depth=0 *
+
+# Display disk space usage for a specific file:
+du -h filename
+
+# Display disk space usage in human-readable format for a specific file:
+du -h --apparent-size filename
+
+# Display only the total disk space usage:
+du -h --summarize
+
+# Display total disk space usage for multiple directories:
+du -h --max-depth=1 dir1 dir2 dir3
+
+# Display disk space usage for a specific file system:
+du -h --max-depth=1 --exclude=/proc --exclude=/sys /
+
+# Display disk space usage in 1K blocks:
+du -b directory
+
+# Display disk space usage for a specific file system type:
+du -h --max-depth=1 --type=ext4 /
+
+# Display total disk space usage for a directory and its subdirectories in a human-readable format:
+du -h --max-depth=1 directory
+
+# Display disk space usage for a directory and its subdirectories, excluding certain patterns:
+du -h --exclude='*.log' directory
+
+# Display disk space usage for a directory and its subdirectories, excluding multiple patterns:
+du -h --exclude='*.log' --exclude='*.txt' directory
 
 
 
