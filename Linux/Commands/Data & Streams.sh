@@ -72,6 +72,93 @@ cat file1 >> file2
 echo "New content" >> existing_file.txt
 
 
+# Pipe Operator (|) - Connecting Commands
+
+# Basic usage: Redirect output of command1 to input of command2
+command1 | command2
+
+# Example: List all files in the current directory and pass the list to the 'grep' command to search for a specific pattern
+ls -l | grep "pattern"
+
+# Display number of lines in a file using 'wc' command
+cat filename.txt | wc -l
+
+# Filter unique lines in a file using 'sort' and 'uniq' commands
+cat filename.txt | sort | uniq
+
+# Combine multiple commands to perform complex operations
+command1 | command2 | command3
+
+# Count the number of occurrences of a specific pattern in a file
+cat filename.txt | grep "pattern" | wc -l
+
+# Display the top processes using 'ps' and 'head' commands
+ps aux | head
+
+# Sort and display the processes using 'ps' command based on CPU usage
+ps aux --sort=-%cpu | head
+
+# Use 'awk' to extract specific columns from the output of another command
+command1 | awk '{print $2}'
+
+# Filter and display specific lines using 'sed' command
+cat filename.txt | sed -n '2,5p'
+
+# Filter and display lines that match a regular expression using 'grep'
+cat filename.txt | grep -E "regex_pattern"
+
+# Combine 'find' and 'grep' to search for files containing a specific pattern
+find /path/to/search -type f -exec grep -l "pattern" {} \;
+
+# Analyze disk space usage using 'du' and 'sort' commands
+du -h /path/to/directory | sort -rh
+
+# Calculate the total size of a directory using 'du' and 'awk'
+du -sh /path/to/directory | awk '{print $1}'
+
+# Tee Command - Read from standard input and write to standard output and files
+
+# Basic usage: Redirect output of command1 to file1 and standard output
+command1 | tee file1
+
+# Append output of command1 to an existing file and standard output
+command1 | tee -a file1
+
+# Redirect output to multiple files
+command1 | tee file1 file2 file3
+
+# Append output to multiple files
+command1 | tee -a file1 file2 file3
+
+# Redirect and display output on the terminal
+command1 | tee /dev/tty
+
+# Redirect and display output on the terminal, and also to a file
+command1 | tee file1 /dev/tty
+
+# Combine multiple commands and use tee
+command1 | tee file1 | command2
+
+# Use tee with sudo to write to a file with elevated privileges
+echo "text" | sudo tee /path/to/file
+
+# Redirect standard error to a file and display it on the terminal
+command1 2>&1 | tee error.log
+
+# Redirect both standard output and standard error to a file
+command1 2>&1 | tee output_and_error.log
+
+# Use tee in a pipeline to create a backup copy of a file
+cat original_file | tee backup_file | command1
+
+# Capture and display the output of a command, and also send it to another command
+command1 | tee >(command2)
+
+# Display the output of a command, and also send it to another command and a file
+command1 | tee >(command2) file1
+
+# Discard standard output and only write to files
+command1 > /dev/null | tee file1 file2 file3
 
 
 
