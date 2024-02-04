@@ -417,6 +417,85 @@ cut -d'_' -f1-4,8-12 filename.txt
 # Extract a specific range of fields (2 to 4) from each line in a file using a different delimiter (pipe)
 cut -d'|' -f2-4 filename.txt
 
+# sed Command - Stream Editor
+
+# Replace a specific string in a file
+sed 's/old_string/new_string/' filename.txt
+
+# Replace the first occurrence of a string in each line of a file
+sed 's/old_string/new_string/' filename.txt
+
+# Replace all occurrences of a string in each line of a file
+sed 's/old_string/new_string/g' filename.txt
+
+# Replace a string only in lines that match a pattern
+sed '/pattern/s/old_string/new_string/' filename.txt
+
+# Replace a string globally, case-insensitive
+sed 's/old_string/new_string/gI' filename.txt
+
+# Replace a string only in lines within a specific range
+sed '2,5 s/old_string/new_string/g' filename.txt
+
+# Delete lines that match a specific pattern
+sed '/pattern/d' filename.txt
+
+# Delete empty lines in a file
+sed '/^$/d' filename.txt
+
+# Add a new line after each line in a file
+sed 's/$/\n/' filename.txt
+
+# Add a new line before each line in a file
+sed 's/^/\n/' filename.txt
+
+# Remove leading spaces from each line in a file
+sed 's/^ *//' filename.txt
+
+# Remove trailing spaces from each line in a file
+sed 's/ *$//' filename.txt
+
+# Remove both leading and trailing spaces from each line in a file
+sed 's/^ *//;s/ *$//' filename.txt
+
+# Substitute a specific pattern with another using a different delimiter
+sed 's|pattern|replacement|' filename.txt
+
+# Replace text in a specific column (e.g., second column, tab-delimited)
+sed 's/\told_string/\tnew_string/' filename.txt
+
+# Insert text at the beginning of each line
+sed 's/^/inserted_text/' filename.txt
+
+# Append text at the end of each line
+sed 's/$/appended_text/' filename.txt
+
+# Print only lines that match a specific pattern
+sed -n '/pattern/p' filename.txt
+
+# Print lines within a specific range
+sed -n '2,5p' filename.txt
+
+# Print lines that do not match a pattern
+sed -n '/pattern/!p' filename.txt
+
+# Swap two words in each line
+sed 's/\(word1\) \(word2\)/\2 \1/' filename.txt
+
+# Replace only the second occurrence of a pattern in each line
+sed 's/pattern/replacement/2' filename.txt
+
+# Delete lines starting from a specific line number to the end
+sed '5,$d' filename.txt
+
+# Duplicate each line in a file
+sed 'p' filename.txt
+
+# Delete lines that do not match a pattern
+sed '/pattern/!d' filename.txt
+
+# Remove HTML tags from a file
+sed 's/<[^>]*>//g' filename.html
 
 
 
