@@ -295,6 +295,67 @@ echo "ABC" | xxd -p | tr -d '\n'
 # Use tr to ROT13 encode a message
 echo "Hello, World!" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
+# rev Command - Reverse Order of Characters
+
+# Reverse the characters in a string
+echo "hello" | rev
+
+# Reverse the characters in a file
+rev filename.txt
+
+# Reverse the characters in multiple lines in a file
+cat multiline_file.txt | rev
+
+# Reverse the characters in a string with newline characters
+echo -e "line1\nline2\nline3" | rev
+
+# Reverse the characters in a string with tabs
+echo -e "col1\tcol2\tcol3" | rev
+
+# Reverse the characters in a string with spaces
+echo "word1 word2 word3" | rev
+
+# Reverse the characters in a string with special characters
+echo "abc@123#xyz" | rev
+
+# Reverse the characters in a string with digits
+echo "12345" | rev
+
+# Reverse the characters in a string with mixed characters
+echo "a1b2c3" | rev
+
+# Reverse the characters in a string with non-printable characters
+echo -e "hello\tworld" | rev
+
+# Reverse the order of words in a string
+echo "This is a test" | rev | awk '{ for(i=NF;i>0;i--) printf "%s ",$i }'
+
+# Reverse the order of characters in a file and save to a new file
+rev original.txt > reversed.txt
+
+# Reverse the characters in a string containing Unicode characters
+echo "Привет" | rev
+
+# Reverse the characters in a string containing emojis
+echo "😊🌍" | rev
+
+# Reverse the characters in a string and remove newline characters
+echo -e "line1\nline2\nline3" | rev | tr -d '\n'
+
+# Reverse the characters in a string and remove spaces
+echo "word1 word2 word3" | rev | tr -d ' '
+
+# Reverse the characters in a string and replace spaces with underscores
+echo "word1 word2 word3" | rev | tr ' ' '_'
+
+# Reverse the characters in a string and delete specific characters
+echo "abc123!@#" | rev | tr -d '!@#'
+
+# Reverse the characters in a string and count the number of characters
+echo "hello" | rev | wc -c
+
+# Reverse the characters in a string and display on the terminal
+echo "hello" | rev | tee /dev/tty
 
 
 
