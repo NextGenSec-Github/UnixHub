@@ -160,6 +160,69 @@ command1 | tee >(command2) file1
 # Discard standard output and only write to files
 command1 > /dev/null | tee file1 file2 file3
 
+# Sort Command - Sorting Text Data
+
+# Sort lines of a file alphabetically
+sort filename.txt
+
+# Sort lines in reverse order
+sort -r filename.txt
+
+# Sort lines numerically
+sort -n filename.txt
+
+# Sort lines in reverse numerical order
+sort -nr filename.txt
+
+# Sort lines based on the second column (using space as a delimiter)
+sort -k2 filename.txt
+
+# Sort lines based on a specific field (using colon as a delimiter)
+sort -t: -k3 filename.txt
+
+# Sort lines ignoring leading blanks
+sort -b filename.txt
+
+# Sort lines in a random order
+sort -R filename.txt
+
+# Sort a file in-place (overwrite the original file)
+sort -o filename.txt filename.txt
+
+# Uniq Command - Removing Duplicate Lines
+
+# Remove adjacent duplicate lines in a sorted file
+uniq sorted_file.txt
+
+# Count the number of occurrences of each unique line in a sorted file
+uniq -c sorted_file.txt
+
+# Display only the duplicate lines in a sorted file
+uniq -d sorted_file.txt
+
+# Display only the unique lines in a sorted file
+uniq -u sorted_file.txt
+
+# Ignore a specific number of leading fields while checking for uniqueness
+uniq -f N sorted_file.txt
+
+# Ignore a specific number of characters while checking for uniqueness
+uniq -s N sorted_file.txt
+
+# Combine sort and uniq to find unique lines in an unsorted file
+sort unsorted_file.txt | uniq
+
+# Combine sort and uniq to find duplicate lines in an unsorted file
+sort unsorted_file.txt | uniq -d
+
+# Combine sort, uniq, and count to find the most common lines in a file
+sort file.txt | uniq -c | sort -nr
+
+# Combine sort and uniq to find common lines between two files
+sort file1.txt file2.txt | uniq -d
+
+# Combine sort and uniq to find lines unique to each file
+sort file1.txt file2.txt | uniq -u
 
 
 
