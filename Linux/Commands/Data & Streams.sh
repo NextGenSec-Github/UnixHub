@@ -224,6 +224,76 @@ sort file1.txt file2.txt | uniq -d
 # Combine sort and uniq to find lines unique to each file
 sort file1.txt file2.txt | uniq -u
 
+# tr Command - Translate Characters
+
+# Replace all occurrences of 'a' with 'b' in a file
+cat filename.txt | tr 'a' 'b'
+
+# Translate uppercase to lowercase
+echo "HELLO" | tr 'A-Z' 'a-z'
+
+# Translate lowercase to uppercase
+echo "hello" | tr 'a-z' 'A-Z'
+
+# Delete specific characters
+echo "remove spaces" | tr -d ' '
+
+# Replace spaces with underscores
+echo "replace spaces" | tr ' ' '_'
+
+# Replace multiple characters with a single character
+echo "123-456-789" | tr -s '0-9' '-'
+
+# Translate newline characters to spaces
+echo -e "line1\nline2\nline3" | tr '\n' ' '
+
+# Delete all digits from a string
+echo "a1b2c3" | tr -d '0-9'
+
+# Translate tabs to spaces
+echo -e "col1\tcol2\tcol3" | tr '\t' ' '
+
+# Squeeze multiple occurrences of a character into a single occurrence
+echo "squeezeee" | tr -s 'e'
+
+# Translate a range of characters to another range
+echo "abcdef" | tr 'a-c' 'x-z'
+
+# Delete non-printable characters
+echo -e "hello\tworld" | tr -cd '[:print:]'
+
+# Translate specific characters to another set of characters
+echo "apple" | tr 'ae' 'xy'
+
+# Translate characters from one set to another
+echo "abc" | tr 'a-c' '123'
+
+# Use tr to remove unwanted characters from a file
+cat filename.txt | tr -cd '[:alnum:]\n'
+
+# Translate spaces to commas
+echo "word1 word2 word3" | tr ' ' ','
+
+# Translate characters to their octal representation
+echo "ABC" | tr -c '[:print:]' '\40\41\42'
+
+# Convert uppercase to lowercase using echo and tr
+echo "UPPERCASE" | tr 'A-Z' 'a-z'
+
+# Remove trailing newline characters
+echo -e "line1\nline2\n" | tr -d '\n'
+
+# Translate multiple characters to the same character
+echo "aaaabbbbcccc" | tr 'a-c' 'x'
+
+# Reverse the order of characters in a string
+echo "hello" | rev | tr -d '\n'
+
+# Translate specific characters to their hexadecimal representation
+echo "ABC" | xxd -p | tr -d '\n'
+
+# Use tr to ROT13 encode a message
+echo "Hello, World!" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 
 
