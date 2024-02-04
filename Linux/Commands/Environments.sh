@@ -83,3 +83,35 @@ echo $SSH_AUTH_SOCK
 # SHELL - Current shell
 echo $SHELL
 
+# Set a variable for the current session and subsequent sessions (add to shell profile):
+echo 'export MY_VARIABLE=value' >> ~/.bashrc  # For Bash
+source ~/.bashrc  # Reload the Bash configuration
+
+# Setting multiple variables at once:
+export VAR1=value1 VAR2=value2
+
+# Remove a variable from shell profile (for subsequent sessions):
+sed -i '/export MY_VARIABLE/d' ~/.bashrc  # For Bash
+source ~/.bashrc  # Reload the Bash configuration
+
+# Unset multiple variables:
+unset VAR1 VAR2
+
+# Remove multiple variables from shell profile:
+sed -i '/export VAR1/d; /export VAR2/d' ~/.bashrc  # For Bash
+source ~/.bashrc  # Reload the Bash configuration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
