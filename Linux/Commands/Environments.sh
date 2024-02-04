@@ -101,6 +101,29 @@ unset VAR1 VAR2
 sed -i '/export VAR1/d; /export VAR2/d' ~/.bashrc  # For Bash
 source ~/.bashrc  # Reload the Bash configuration
 
+# Understanding The PATH Variable - The PATH variable is integral to the shell's functionality, dictating the directories searched for executable programs.
+
+
+# View the current PATH
+echo $PATH
+
+# Add a directory to the beginning of PATH
+export PATH=/new/directory:$PATH
+
+# Add a directory to the end of PATH
+export PATH=$PATH:/new/directory
+
+# Add multiple directories at once
+export PATH=/new/directory1:/new/directory2:$PATH
+
+# Remove a directory from PATH
+export PATH=$(echo $PATH | sed 's;/old/directory:;;')
+
+# Temporarily modify PATH for a single command
+PATH=/temporary/directory:$PATH command_to_run
+
+# Restore PATH to its original state
+export PATH=$ORIGINAL_PATH
 
 
 
