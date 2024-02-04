@@ -358,6 +358,64 @@ echo "hello" | rev | wc -c
 echo "hello" | rev | tee /dev/tty
 
 
+# cut Command - Extract Sections from Lines
+
+# Extract the first three characters from each line in a file
+cut -c1-3 filename.txt
+
+# Extract characters 4 to 6 from each line in a file
+cut -c4-6 filename.txt
+
+# Extract characters 2 and 5 from each line in a file
+cut -c2,5 filename.txt
+
+# Extract the first field (delimited by space) from each line in a file
+cut -f1 -d' ' filename.txt
+
+# Extract the second field (delimited by colon) from each line in a file
+cut -f2 -d':' filename.txt
+
+# Extract fields 2 and 3 (delimited by tab) from each line in a file
+cut -f2,3 -d$'\t' filename.txt
+
+# Extract characters 2 to the end of each line in a file
+cut -c2- filename.txt
+
+# Extract the first field using a different delimiter (comma)
+cut -f1 -d',' filename.csv
+
+# Extract characters 1 to 5 and 8 to 12 from each line in a file
+cut -c1-5,8-12 filename.txt
+
+# Extract fields 2 and 3 using a different delimiter (semicolon)
+cut -f2,3 -d';' filename.txt
+
+# Display only the lines that contain a specific delimiter (colon)
+cut -f2 -d':' -s filename.txt
+
+# Display only the lines that do not contain a specific delimiter (comma)
+cut -f2 -d',' --complement filename.csv
+
+# Extract the first field and the remaining characters from each line
+cut -f1 --complement filename.txt
+
+# Display only the lines that do not have a specific character (a)
+cut -c1 --complement filename.txt
+
+# Extract the last field (delimited by space) from each line in a file
+rev filename.txt | cut -f1 -d' ' | rev
+
+# Extract the last field (delimited by colon) from each line in a file
+rev filename.txt | cut -f1 -d':' | rev
+
+# Extract characters 3 to the end of each line using a different delimiter (hyphen)
+cut -d'-' -f2- filename.txt
+
+# Extract characters 1 to 4 and 8 to 12 from each line in a file using a different delimiter (underscore)
+cut -d'_' -f1-4,8-12 filename.txt
+
+# Extract a specific range of fields (2 to 4) from each line in a file using a different delimiter (pipe)
+cut -d'|' -f2-4 filename.txt
 
 
 
