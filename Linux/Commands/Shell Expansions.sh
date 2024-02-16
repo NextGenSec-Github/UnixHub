@@ -1,4 +1,101 @@
+# ================
+# SHELL EXPANSIONS
+# ================
+
+# ===================
+# VARIABLE EXPANSIONS
+# ===================
+
 #!/bin/bash
+
+# Create a variable
+variable="Hello, World!"
+
+# Variable expansion: access the value of a variable using $
+echo "Variable expansion without curly braces: $variable"
+
+# Variable expansion: access the value of a variable using ${}
+echo "Variable expansion with curly braces: ${variable}"
+
+# Variable expansion: access the value of a variable within double quotes
+echo "Variable expansion within double quotes: "$variable""
+
+# Variable expansion: access the value of a variable within single quotes (literal interpretation)
+echo 'Variable expansion within single quotes: '$variable''
+
+# Tilde expansion: represents the home directory of the current user
+echo "Tilde expansion: ~"
+
+# Tilde expansion: represents the home directory of a specific user
+echo "Tilde expansion for another user: ~username"
+
+# Parameter expansion: get the length of a string
+echo "Length of the string: ${#variable}"
+
+# Parameter expansion: extract a substring
+echo "Substring extraction: ${variable:7:5}" # Extracts "World"
+
+# Parameter expansion: replace a pattern in a string
+echo "Pattern replacement: ${variable/Hello/Hi}" # Replaces "Hello" with "Hi"
+
+# Parameter expansion: replace all occurrences of a pattern in a string
+echo "Global pattern replacement: ${variable//o/O}" # Replaces all "o" with "O"
+
+# Parameter expansion: default value if variable is unset or null
+echo "Default value if unset: ${unset_variable:-default}" # Prints "default" if unset_variable is unset or null
+
+# Parameter expansion: default value if variable is unset, null, or empty
+echo "Default value if unset or empty: ${empty_variable:=default}" # Sets empty_variable to "default" if it's unset, null, or empty
+
+# Parameter expansion: use alternate value if variable is unset or null
+echo "Alternate value if unset: ${unset_variable:+alternate}" # Prints "alternate" if unset_variable is set, otherwise does nothing
+
+# Parameter expansion: remove pattern from the beginning of a string
+echo "Remove pattern from the beginning: ${variable#Hello, }" # Removes "Hello, "
+
+# Parameter expansion: remove pattern from the end of a string
+echo "Remove pattern from the end: ${variable%, World!}" # Removes ", World!"
+
+# Parameter expansion: remove longest match of pattern from the beginning of a string
+echo "Remove longest match from the beginning: ${variable##*o}" # Removes "He"
+
+# Parameter expansion: remove longest match of pattern from the end of a string
+echo "Remove longest match from the end: ${variable%%, *}" # Removes ", World!"
+
+# Command substitution: execute a command and substitute its output
+echo "Current date: $(date)"
+
+# Arithmetic expansion: perform arithmetic operations
+echo "Result of 10 + 20 = $((10 + 20))"
+
+# Process substitution: substitute the output of a command as a file name or input
+diff <(command1) <(command2)
+
+# Command grouping: group commands and execute them as a single command
+{
+    echo "This"
+    echo "is"
+    echo "a"
+    echo "group"
+}
+
+# File name expansion (globbing): match filenames with patterns
+echo "List of text files: "*.txt""
+
+# History expansion: recall and execute previous commands
+!-2 # Repeats the second last command
+
+# Pathname expansion: match filenames or pathnames
+echo "List of files in directory: "*/""
+
+# Brace expansion: generate sequences or permutations
+echo "Sequence of numbers: "{1..5}
+echo "Permutations of letters: "{a..e}
+
+
+# ========================
+# GENERAL SHELL EXPANSIONS
+# ========================
 
 # Create a variable with a simple string
 simple_string="Hello, World!"
