@@ -23,12 +23,6 @@ echo "Variable expansion within double quotes: "$variable""
 # Variable expansion: access the value of a variable within single quotes (literal interpretation)
 echo 'Variable expansion within single quotes: '$variable''
 
-# Tilde expansion: represents the home directory of the current user
-echo "Tilde expansion: ~"
-
-# Tilde expansion: represents the home directory of a specific user
-echo "Tilde expansion for another user: ~username"
-
 # Parameter expansion: get the length of a string
 echo "Length of the string: ${#variable}"
 
