@@ -1,14 +1,4 @@
 #!/bin/bash
-#Scan for open ports on a target machine
-
-echo "Enter the IP address or hostname of the target:"
-
-read target
-
-# Perform port scan using nmap
-nmap $target
-ysf-unix@DESKTOP-K9OV6GE:/mnt/c/Users/eller/Desktop/Scripting/security_scripts$ cat ssh_rotate.sh
-#!/bin/bash
 # Rotate SSH keys for enhanced security
 
 echo "Generating new SSH key pair...."
