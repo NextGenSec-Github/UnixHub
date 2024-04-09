@@ -31,9 +31,13 @@ echo "Age: $age"
 
 #### If-Else Statements
 If-else statements allow you to perform conditional execution based on certain conditions:
-
-
-
+```bash
+if [ "$age" -ge 18 ]; then
+    echo "You are an adult."
+else
+    echo "You are a minor."
+fi
+```
 
 
 
