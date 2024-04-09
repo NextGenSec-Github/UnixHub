@@ -39,6 +39,24 @@ else
 fi
 ```
 
+#### For and While Loops
+Bash supports for and while loops for iterating over lists of items or until a condition is met:
+
+
+```bash
+# For loop
+for i in {1..5}; do
+    echo "$i"
+done
+```
+```bash
+# While loop
+count=0
+while [ "$count" -lt 5 ]; do
+    echo "$count"
+    ((count++))
+done
+```
 
 
 
