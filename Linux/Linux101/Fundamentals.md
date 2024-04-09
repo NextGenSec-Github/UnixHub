@@ -18,7 +18,10 @@ Let's say you have a directory containing log files, and you want to search for 
 ```bash
 grep "keyword" *.log | sort | uniq -c | sort -nr
 ```
-- **grep "keyword" * .log:*** This command searches for lines containing the specified keyword in all .log files in the current directory and prints matching lines to the standard output.
+- **grep "keyword" * .log:** This command searches for lines containing the specified keyword in all .log files in the current directory and prints matching lines to the standard output.
+- **sort:** This command sorts the lines received from grep alphabetically.
+- **uniq -c:** This command removes duplicate lines and counts the number of occurrences of each unique line.
+- **sort -nr:** This command sorts the output numerically (-n) in reverse order (-r), so that the lines with the highest counts appear first.
 
 
 
