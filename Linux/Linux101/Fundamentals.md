@@ -12,3 +12,14 @@ Let's say you have a text file containing a list of names, and you want to count
 ```bash
 cat names.txt | wc -l
 ```
+Let's say you have a directory containing log files, and you want to search for lines containing a specific keyword in those log files, count the occurrences of that keyword, and display the result sorted by count:
+
+```bash
+grep "keyword" *.log | sort | uniq -c | sort -nr
+```
+
+
+
+
+
+
