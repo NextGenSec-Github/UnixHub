@@ -7,7 +7,13 @@ Bash (Bourne Again SHell) is a command-line interpreter and scripting language p
 ### Setting Up Your Environment
 Ensure you have a Unix-based operating system with Bash installed. Most Linux distributions come with Bash pre-installed. You can also use macOS, which also includes Bash by default.
 
+### Creating Your First Bash Script
+To create a Bash script, create a new file with a .sh extension and add the following line at the top:
 
+```bash
+#!/bin/bash
+```
+This line is called a shebang and tells the system to execute the script using the Bash interpreter.
 
 
 
