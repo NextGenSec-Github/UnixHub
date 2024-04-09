@@ -18,7 +18,7 @@ Let's say you have a directory containing log files, and you want to search for 
 ```bash
 grep "keyword" *.log | sort | uniq -c | sort -nr
 ```
-- **grep "keyword" *.log:** This command searches for lines containing the specified keyword in all .log files in the current directory and prints matching lines to the standard output.
+- ***grep "keyword" *.log:*** This command searches for lines containing the specified keyword in all .log files in the current directory and prints matching lines to the standard output.
 
 
 
