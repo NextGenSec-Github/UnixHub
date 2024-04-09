@@ -58,17 +58,46 @@ while [ "$count" -lt 5 ]; do
 done
 ```
 
+### 4. Functions
+Functions allow you to encapsulate code for reuse. Here's how to define and use functions in Bash:
+```bash
+# Function definition
+greet() {
+    echo "Hello, $1!"
+}
 
+# Function call
+greet "World"
+```
 
+## Practical Examples
 
+### Hello, World!
+```bash
+#!/bin/bash
 
+echo "Hello, World!"
+```
 
+### User Input
+```bash
+#!/bin/bash
 
+echo "Enter your name:"
+read name
+echo "Hello, $name!"
+```
 
+### File Processing
+```bash
+#!/bin/bash
 
+# Read a file line by line and print each line
+while IFS= read -r line; do
+    echo "$line"
+done < "input.txt"
+```
 
-
-
-
-
+## Conclusion
+Bash scripting is a powerful tool for automating tasks and managing system resources in Unix-based environments. By mastering the fundamentals of Bash scripting, you can streamline workflow processes, increase productivity, and automate routine tasks effectively.
 
