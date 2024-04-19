@@ -28,3 +28,33 @@ Every file in Linux has an owner and a group associated with it. The owner has c
 
 ### Permissions
 Linux uses a permission system to control access to files and directories. Permissions are divided into read, write, and execute permissions for the owner, group, and others.
+
+## Notes for using Files in Linux
+- Filenames that begin with a period character are hidden. This only means that ls will not list them unless you say ls -a. When your account was created, several hidden files were placed in your home directory to configure things for your account.
+- Filenames and commands in Linux, like Unix, are case sensitive. The filenames `File1` and `file1` refer to different files
+- **Do not embed spaces in filenames**. If you want to represent spaces between words in a filename, use underscore characters.
+- Linux has no concept of a “file extension” like some other operating systems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
