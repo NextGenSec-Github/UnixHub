@@ -22,11 +22,20 @@ cd
 
 # FILES
 
+# Create a file
+touch script.py
+# Create a directory
+mdkir python-scripts
 #  The file command will print a brief description of the file’s contents
 file script.py
-
 # The less command is a pager program used to view the contents of a text file in a scrollable and more interactive way
 less script.py
+
+# The cp command copies files or directories
+cp item1 item2 # Copy file1 to file2. If file2 exists, it is overwritten with the contents of file1. If file2 does not exist, it is created.
+
+
+
 
 # WILDCARDS
 
