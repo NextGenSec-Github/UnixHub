@@ -33,8 +33,10 @@ less script.py
 
 # The cp command copies files or directories
 cp item1 item2 # Copy file1 to file2. If file2 exists, it is overwritten with the contents of file1. If file2 does not exist, it is created.
-
-
+cp -i file1 file2 # Same as previous command, except that if file2 exists, the user is prompted before it is overwritten.
+cp file1 file2 dir1 # Copy file1 and file2 into directory dir1
+cp dir1/* dir2 # Copy all the files in dir1 into dir2. 
+cp -r dir1 dir2  # Recursively copy the contents of one directory to another
 
 
 # WILDCARDS
