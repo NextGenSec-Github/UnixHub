@@ -45,10 +45,51 @@ mv file1 file2 dir1 # Move multiple files into a directory
 mv dir1 dir2 # Move dir1 and its contents into dir2
 
 # The rm command is used to remove (delete) files and directories
-rm item
+rm item # Delete an item
+rm -i file1 # Prompts for confirmation before deletion
+rm -r file1 dir1 # Delete file1 and dir1 and its contents.
+rm -rf file1 dir1 # If either file1 or dir1 does not exist, rm will continue silently.
 
+# Alias - Aliases allow us to alias to commands
+alias name='string' # Create an alias
+alias foo='cd /usr; ls; cd -'
+unalias foo # Remove an alias
 
+# Redirecting Standard Output
+ls -l /usr/bin > ls-output.txt # Redirecting standard output, but will overwrite
+ls -l /usr/bin > ls-output.txt # Redirecting standard output, and will append to the output file
 
+# Redirecting Standard Error
+ls -l /bin/usr 2> ls-error.txt # 2 denotes the standard error
+
+# Redirecting Standard Output and Standard Error to One File
+ls -l /bin/usr > ls-output.txt 2>&1
+ls -l /bin/usr &> ls-output.txt # Recent version of bash support this way
+
+# Redirecting errors to /dev/null (A Blackhole)
+ls -l /bin/usr 2> /dev/null # When data is written to /dev/null, it is discarded silently, effectively disappearing into oblivion.
+
+# cat: Concatenate Files - The cat command reads one or more files and copies them to standard output 
+cat filename # Read a file
+cat filename > output.txt # Redirect the files contents to another
+cat < output.txt # The < symbol is used for input redirection, so it tells the cat command to take its input from the specified file rather than from the standard input (typically the keyboard). Therefore, the contents of "output.txt" would be displayed in the terminal.
+
+# Pipelines-  The capability of commands to read data from standard input and send to standard output is utilized by a shell feature called pipelines.
+command1 | command2
+
+# The `type` command displays a commands type
+type <command>
+<command> --help
+
+# Which — Display an Executable’s Location
+which <command>
+
+# help — Get Help for Shell Builtins
+help <command>
+<command> --help
+
+# man—Display a Program’s Manual Page
+man <program>
 
 # WILDCARDS
 
