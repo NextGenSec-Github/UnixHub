@@ -38,6 +38,17 @@ cp file1 file2 dir1 # Copy file1 and file2 into directory dir1
 cp dir1/* dir2 # Copy all the files in dir1 into dir2. 
 cp -r dir1 dir2  # Recursively copy the contents of one directory to another
 
+# The mv command performs both file moving and file renaming, depending on how its used
+mv item1 item2 # Move the item to a directory or change the items name
+mv -i file1 file2 # If file2 exists, the user is prompted before it is overwritten.
+mv file1 file2 dir1 # Move multiple files into a directory
+mv dir1 dir2 # Move dir1 and its contents into dir2
+
+# The rm command is used to remove (delete) files and directories
+rm item
+
+
+
 
 # WILDCARDS
 
