@@ -21,4 +21,26 @@
 ### /lib 
 - Contains shared library files used by the core system programs. These are similar to dynamic link libraries (DLLs) in Windows.
 
+### /lost+found
+- Each formatted partition or device using a Linux file system, such as ext3, will have this directory. It is used in the case of a partial recovery from a file system corruption event. Unless something really bad has happened to your system, this directory will remain empty.
+
+### /media
+- On modern Linux systems, the /media directory will contain the mount points for removable media such as USB drives, CD-ROMs, and so on, that are mounted automatically at insertion.
+
+### /mnt
+- On older Linux systems, the /mnt directory contains mount points for removable devices that have been mounted manually
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
