@@ -68,6 +68,28 @@ cat < output.txt  # Supply the contents of output.txt as input to the cat comman
 ls -l / | grep "bin" # The pipe operator (|) redirects the output of one command and uses it as the input of another
 # -------------------------------
 
+# Arguments
+$0 # The name of the script file
+$1, $2, $3, ... # Positional arguments
+$# # The number of passed positional arguments
+$* # All positional arguments
+$@ # All positional arguments, where each argument is individually quoted
+# ------------------------
+
+# Input
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
