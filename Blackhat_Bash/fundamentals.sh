@@ -28,6 +28,26 @@ echo "${root_directory}"
 
 unset myvar # Unassign variable
 
+# Control Operators
+& # Sends a command to the background.
+&& # Used as a logical AND. The second command in the expression will be evaluated only if the first command evaluates to true.
+(and) # Used for command grouping.
+; # Used as a list terminator. A command following the terminator will run after the preceding command has finished, regardless of whether it evaluates to true or not.
+;; # Ends a case statement.
+| # Redirects the output of a command as input to another command.
+|| # Used as a logical OR. The second command will run if the first one evaluates to false
+
+# Control Operator Examples:
+sleep 10 & # Send the sleep command to the background
+touch test && touch test123 # The && operator allows us to perform an AND operation between two commands
+(ls; ps) # The () operator allows us to group commands so they act a single unit when we need to redirect them together
+ls; ps; whoami # The ; operator allows us to run multiple commands regardless of their exit status
+lzl || echo "the lzl command failed" # The || operator allows us to chain commands together using an OR operation
+
+
+
+
+
 
 
 
