@@ -19,8 +19,14 @@ set +x
 #!/bin/bash -x 'Prints every command executed in the script'
 #!/bin/bash -r  '-r creates a restricted bash shell, which restricts certain potentially dangerous commands that could, for example, navigate to certain directories, change sensitive environment variables,'
 
+# Variables in bash
+myvar="hello world"
+echo "${myvar}"
 
+root_directory=$(ls -ld /)
+echo "${root_directory}"
 
+unset myvar # Unassign variable
 
 
 
