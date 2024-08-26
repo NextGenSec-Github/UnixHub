@@ -13,6 +13,7 @@ set -x
 <script code>
 set +x
 
+
 # Bash Fundamentals
 # Every script should begin with the shebang line. The bash interpreter is typically located at /bin/bash. If youinstead wrote scripts in Python or Ruby, your shebang line would include the full path to the Python or Ruby interpreter
 #!/bin/bash  
