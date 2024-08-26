@@ -76,20 +76,29 @@ $* # All positional arguments
 $@ # All positional arguments, where each argument is individually quoted
 # ------------------------
 
-# Input
+# File Test Operators: File test operators allow us to perform tests against files on the filesystem, such as checking whether a file is executable or whether a certain directory exists.
+
+-d # Checks whether the file is a directory
+-r # Checks whether the file is readable
+-x # Checks whether the file is executable
+-w # Checks whether the file is writable
+-f # Checks whether the file is a regular file
+-s # Checks whether the file size is greater than zero
 
 
+# String Operators: String comparison operators allow us to perform tests related to strings, such as testing whether one string is equal to another.
+= # Checks whether a string is equal to another string
+== # Synonym of = when used within [[]] constructs
+!= # Checks whether a string is not equal to another string
+< # Checks whether a string comes before another string (in alphabetical order)
+> # Checks whether a string comes after another string (in alphabetical order)
+-z # Checks whether a string is null
+-n # Checks whether a string is not null
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Integer Operators: Integer comparison operators allow us to perform checks on integers, such as whether an integer is less than or greater than another. 
+-eq # Checks whether a number is equal to another number
+-ne # Checks whether a number is not equal to another number
+-ge # Checks whether a number is greater than or equal to another number
+-gt # Checks whether a number is greater than another number
+-lt # Checks whether a number is less than another number
+-le # Checks whether a number is less than or equal to another number
