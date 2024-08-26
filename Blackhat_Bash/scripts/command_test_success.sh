@@ -1,5 +1,5 @@
 #!/bin/bash
 
-if tpuch test123; then
+if touch test123; then
   echo "Success: Created File"
 fi
