@@ -23,3 +23,25 @@ sed '$d' log.txt # Delete the last line of the file
 sed '5,7d' log.txt # Delete lines 5 and 7
 sed -n '2,15 p' log.txt # Print line range 2 to 15
 sed -i '1d' log.txt # When you pass sed the -i argument, it will make the changes to the file itself rather than create a modified copy
+
+# Job Control
+sleep 100 & # Send this sleep command as a background job
+ps -ef | grep sleep # verify this background job
+jobs # List job running
+fg %1 # Move the job to the foreground by specifying the job id
+bg %1 # Send the job to the background again
+nohup ./my_script.sh & # Make a scripts run even when we logout and run it in the background
+
+# Bash Pentest Setup
+echo $PATH # Bash searches for programs within directories defined by the PATH environment variable.
+alias quicknmap="nmap -vv -T4 -p- -sV --max-retries 5 localhost" # aliases allow us to not have to remember long commands. NOTE: Aliases are not permanent but can be with the ~/.bashrc file
+alias helloworld="bash ~/scripts/helloworld.sh" # You can even alias your own scripts!
+source ~/.pentest # Import pentest command and scripts to a ~/. file and then import it to the bashrc with 'source'
+
+
+
+
+
+
+
+
